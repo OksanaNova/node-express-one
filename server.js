@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-    res.send('HEY I GOT HERE')
+    res.sendFile(__dirname + '/form.html')
 })
 
 app.get('/vegan', (req, res) => {

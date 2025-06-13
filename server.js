@@ -4,6 +4,11 @@ const bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({extended: false}));
 
+
+// ВМЕСТО bodyParser МОЖНО ПИСАТЬ ТАК
+// app.use(express.urlencoded({ extended: true}));
+// app.use(express.json());
+
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/form.html')
 })
